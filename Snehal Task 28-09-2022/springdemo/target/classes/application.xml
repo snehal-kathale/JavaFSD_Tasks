@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  setter method injection  -->
+  
+  <bean id="a1"  class="com.starhealth.springdemo.Address" scope="singleton">
+  
+  <property name="city" value="Hyderabad"></property>
+  
+  
+  </bean>
+  
+  
+  
+<bean  id="stu1"  class="com.starhealth.springdemo.Student"  scope="prototype">
+  
+  
+  <property name="sid" value="101"></property>
+   <property name="sname" value="javeed"></property>
+    <property name="marks" value="50000"></property>
+  	<property name="address"  ref="a1" ></property>
+  	
+  	<property name="skills">
+  	
+  			<list>
+  			
+  				<value>Java</value>
+  				<value>Python</value>
+  				<value>Angular</value>
+  			
+  			</list>
+  	
+  	
+  <!-- 	<map>
+  	
+  		<entry> <key>1</key> <value>ONE</value> </entry>
+  	
+  	</map>
+  	 -->
+  	</property>
+  	
+  
+  </bean>
+  
+  
+  <bean  id="h1" class="com.starhealth.springdemo.Hello" scope="singleton">
+  </bean>
+  
+  
+  
+  <bean id="stu4" class="com.starhealth.springdemo.Student">
+  
+  <constructor-arg   name="sid" value="501" ></constructor-arg>
+  <constructor-arg   name="sname" value="tom" ></constructor-arg>
+  <constructor-arg   name="marks" value="60000" ></constructor-arg>
+  
+  
+  
+  </bean>
+  
+  
+  
+  
+   <!-- 
+<bean  id="stu2"  class="com.starhealth.springdemo.Student">
+  
+  
+  <property name="sid" value="102"></property>
+   <property name="sname" value="anand"></property>
+    <property name="marks" value="30000"></property>
+  
+  
+  </bean>
+  
+   
+<bean  id="stu3"  class="com.starhealth.springdemo.Student">
+  
+  
+  <property name="sid" value="103"></property>
+   <property name="sname" value="snehal"></property>
+    <property name="marks" value="50000"></property>
+  
+  
+   -->
+  
+  
+  
+
+</beans>
