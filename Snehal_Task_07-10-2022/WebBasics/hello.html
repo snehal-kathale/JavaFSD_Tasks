@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myfun(){
+  
+          
+          var element = document.getElementById("uid");
+          var uname = document.getElementById("uid").value; 
+          alert("Welcome" + uname);
+          console.log(element);
+        }
+  
+  </script>
+</head>
+
+
+
+<body>
+    <form>
+    USER NAME :<input type="text" id="uid" name="uname"><br>
+    PASSWORD:<input type="password" id="pws" name="pswd"><br>
+    <button type="button" onclick="myfun()">Login</button>
+</form>
+</body>
+</html>
