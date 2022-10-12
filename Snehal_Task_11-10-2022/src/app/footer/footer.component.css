@@ -1,0 +1,14 @@
+h4{
+    color: black; 
+    padding-top: 1.3rem; 
+}
+
+.design{
+    background-color: rgb(152, 152, 199);
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    border: 2%;
+    border-color:rgb(172, 42, 42);
+    
+}
