@@ -1,0 +1,60 @@
+
+
+<h2>App component Directives</h2>
+<h3>ngIf angular </h3>
+<h4 *ngIf="15>13">Hello</h4>
+<h4 *ngIf="Flag">Flag </h4>
+
+<!-- <h2>ngModel angular </h2> -->
+ <h2>ngSwitch angular </h2>
+<form>
+    Enter input:<input type="text" name="choice" [(ngModel)]="choice">
+</form>
+
+
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="'A'">Option A selected</div>
+    <div *ngSwitchCase="'B'">Option B selected</div>
+    <div *ngSwitchCase="'C'">Option B selected</div>
+    <div *ngSwitchDefault>Incorrect character Enter A,B or C</div>
+</div>
+
+<h3>List Of Flowers </h3>
+<p>Just type a flower name</p>
+<form>
+   <p [ngStyle]="{color:'red'}">Enter names in lowercase only:<input type="text" name="data" [(ngModel)]="data" ></p>
+</form>
+
+
+<div [ngSwitch]="data">
+    <div *ngSwitchCase="'rose'"><img src="../assets/rose.jpeg" width="200px" height="250px"></div>
+    <div *ngSwitchCase="'lotus'"><img src="../assets/lotus.jpeg" width="250px" height="250px"></div>
+    <div *ngSwitchCase="'marigold'"> <img src="../assets/marigold.jpeg" width="200px" height="250px"></div>
+    <div *ngSwitchCase="'lily'"> <img src="../assets/lily.jpeg" width="200px" height="250px"></div>
+    
+    <div *ngSwitchDefault>enter ur data</div>
+</div>
+
+<h2>ngFor angular </h2>
+<ul>
+    <li *ngFor="let name of names;">{{name}}</li>
+
+</ul>
+
+<h2>ngStyle angular </h2>
+
+<h4 [ngStyle]="{color:mycolor}">Welcome to angular</h4>
+
+<h2>Angular Pipes</h2>
+<h4>Date using Pipes:</h4>
+<h4> The longest day in the year {{Ldate|date}}</h4>
+
+<h2>Currency using Pipes:</h2>
+<h4>Indian Currency {{ 12345 | currency:"INR":"symbol-narrow" }} </h4>
+<h4>Canadian Currency {{ 12345 | currency:"CAD":"symbol-narrow" }} </h4>
+
+<h4>Decimal numbers using Pipes:</h4>
+<h4>{{ 3.141 | number: '3.1-2' }}</h4>  
+
+
+<app-constumer></app-constumer>
